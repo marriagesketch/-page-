@@ -408,6 +408,18 @@ a { color: var(--rose); }
   width: 100%;
   filter: drop-shadow(0 12px 24px rgba(198, 74, 103, 0.18));
 }
+.menu__terms {
+  margin-top: 14px;
+  padding: 12px 16px;
+  border-left: 3px solid var(--blush-deep);
+  background: var(--blush);
+  border-radius: 0 10px 10px 0;
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--ink);
+}
+.menu__terms strong { color: var(--rose); font-weight: 700; }
+
 .menu__list { margin-top: 28px; display: grid; gap: 20px; }
 .menu__list > div {
   padding-left: 16px;
