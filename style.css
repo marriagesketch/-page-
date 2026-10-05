@@ -131,15 +131,38 @@ a { color: var(--rose); }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 16px;
+  gap: 12px;
 }
 .logo {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
   font-family: var(--font-serif);
   font-weight: 700;
-  font-size: 22px;
-  letter-spacing: 0.1em;
+  font-size: 20px;
+  letter-spacing: 0.06em;
   color: var(--rose);
   text-decoration: none;
+}
+.logo__sub {
+  margin-left: 2px;
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0;
+  color: var(--ink-soft);
+}
+.site-header .line-btn { flex: none; }
+.site-header .line-btn--sm img { height: 32px; }
+@media (max-width: 380px) {
+  .logo__sub { display: none; }
+}
+@media (min-width: 540px) {
+  .logo { font-size: 22px; letter-spacing: 0.1em; }
+  .logo__sub { font-size: 13px; }
+  .site-header .line-btn--sm img { height: 36px; }
 }
 .gnav { display: none; }
 @media (min-width: 900px) {
