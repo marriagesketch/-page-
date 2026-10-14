@@ -94,7 +94,7 @@ https://api.line.me/v2/bot/richmenu
 {"richMenuId":"richmenu-21b9f9cd08466df5e6c3a1175c4fe0e7"}
 ```
 
-👉 これを以後 `{richMenuId_A}` とします。
+👉 これを以後 `richmenu-21b9f9cd08466df5e6c3a1175c4fe0e7` とします。
 
 ---
 
@@ -102,9 +102,9 @@ https://api.line.me/v2/bot/richmenu
 
 ### Postmanでの設定
 - メソッド：**POST**
-- URL（`{richMenuId_A}` を実際のIDに置き換え）：
+- URL（`richmenu-21b9f9cd08466df5e6c3a1175c4fe0e7` を実際のIDに置き換え）：
 ```
-https://api-data.line.me/v2/bot/richmenu/{richMenuId_A}/content
+https://api-data.line.me/v2/bot/richmenu/richmenu-21b9f9cd08466df5e6c3a1175c4fe0e7/content
 ```
 - Headers：
 
@@ -127,9 +127,9 @@ https://api-data.line.me/v2/bot/richmenu/{richMenuId_A}/content
 
 ### Postmanでの設定
 - メソッド：**POST**
-- URL（`{richMenuId_A}` を実際のIDに置き換え）：
+- URL（`richmenu-21b9f9cd08466df5e6c3a1175c4fe0e7` を実際のIDに置き換え）：
 ```
-https://api.line.me/v2/bot/user/all/richmenu/{richMenuId_A}
+https://api.line.me/v2/bot/user/all/richmenu/richmenu-21b9f9cd08466df5e6c3a1175c4fe0e7
 ```
 - Headers：
 
