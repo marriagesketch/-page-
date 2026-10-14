@@ -49,28 +49,36 @@ https://api.line.me/v2/bot/richmenu
 {
     "size": { "width": 2500, "height": 1686 },
     "selected": true,
-    "name": "richmenu-pre",
+    "name": "richmenu-pre_final",
     "chatBarText": "メニュー",
     "areas": [
         {
+            "bounds": { "x": 1250, "y": 0, "width": 1250, "height": 223 },
+            "action": {
+                "type": "richmenuswitch",
+                "richMenuAliasId": "richmenu-alias-shinken",
+                "data": "switch-to-shinken"
+            }
+        },
+        {
             "bounds": { "x": 0, "y": 223, "width": 836, "height": 998 },
-            "action": { "type": "uri", "uri": "https://miniapp.line.me/{自己開示Part1のliffId}" }
+            "action": { "type": "uri", "uri": "https://miniapp.line.me/2010312230-hylUrwot" }
         },
         {
             "bounds": { "x": 836, "y": 223, "width": 827, "height": 998 },
-            "action": { "type": "uri", "uri": "https://miniapp.line.me/{自己開示Part2のliffId}" }
+            "action": { "type": "uri", "uri": "https://miniapp.line.me/2010312230-4V3s95nz" }
         },
         {
             "bounds": { "x": 1663, "y": 223, "width": 837, "height": 998 },
-            "action": { "type": "uri", "uri": "https://miniapp.line.me/{自己開示Part3のliffId}" }
+            "action": { "type": "uri", "uri": "https://miniapp.line.me/2010312230-bMhTf6he" }
         },
         {
             "bounds": { "x": 0, "y": 1221, "width": 1250, "height": 465 },
-            "action": { "type": "uri", "uri": "https://miniapp.line.me/{婚活プロフィールのliffId}" }
+            "action": { "type": "uri", "uri": "https://miniapp.line.me/2010312230-3gcd1xq6" }
         },
         {
             "bounds": { "x": 1250, "y": 1221, "width": 1250, "height": 465 },
-            "action": { "type": "uri", "uri": "https://miniapp.line.me/{価値観すり合わせのliffId}" }
+            "action": { "type": "uri", "uri": "https://miniapp.line.me/2010312230-eMR5533o" }
         }
     ]
 }
