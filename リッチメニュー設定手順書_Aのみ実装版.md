@@ -40,7 +40,7 @@ https://api.line.me/v2/bot/richmenu
 
 | Key | Value |
 |---|---|
-| Authorization | Bearer {channel access token} |
+| Authorization | Bearer amxg/VZETTECi1jcqDmjymR5JDc1tGPKeDBNb9+UFTRzFaZjs0LJ8PJFCLSELG/QSzohN/6Etf0+mMnCw8LnY3I1JjqMq8sfb71dRA8YSn0ZGS5Crn99QOnCs13v9GK6L+9Eo3Z+wVwiQmltsjgmPAdB04t89/1O/w1cDnyilFU= |
 | Content-Type | application/json |
 
 - Body（raw / JSON）：
@@ -110,7 +110,7 @@ https://api-data.line.me/v2/bot/richmenu/{richMenuId_A}/content
 
 | Key | Value |
 |---|---|
-| Authorization | Bearer {channel access token} |
+| Authorization | Bearer amxg/VZETTECi1jcqDmjymR5JDc1tGPKeDBNb9+UFTRzFaZjs0LJ8PJFCLSELG/QSzohN/6Etf0+mMnCw8LnY3I1JjqMq8sfb71dRA8YSn0ZGS5Crn99QOnCs13v9GK6L+9Eo3Z+wVwiQmltsjgmPAdB04t89/1O/w1cDnyilFU= |
 | Content-Type | image/jpeg |
 
 - Body：「binary」を選択し、`richmenu-pre.jpg` を選択
@@ -135,7 +135,7 @@ https://api.line.me/v2/bot/user/all/richmenu/{richMenuId_A}
 
 | Key | Value |
 |---|---|
-| Authorization | Bearer {channel access token} |
+| Authorization | Bearer amxg/VZETTECi1jcqDmjymR5JDc1tGPKeDBNb9+UFTRzFaZjs0LJ8PJFCLSELG/QSzohN/6Etf0+mMnCw8LnY3I1JjqMq8sfb71dRA8YSn0ZGS5Crn99QOnCs13v9GK6L+9Eo3Z+wVwiQmltsjgmPAdB04t89/1O/w1cDnyilFU= |
 
 - Body：なし（「none」を選択）
 
