@@ -1,8 +1,0 @@
-$token = Read-Host "amxg/VZETTECi1jcqDmjymR5JDc1tGPKeDBNb9+UFTRzFaZjs0LJ8PJFCLSELG/QSzohN/6Etf0+mMnCw8LnY3I1JjqMq8sfb71dRA8YSn0ZGS5Crn99QOnCs13v9GK6L+9Eo3Z+wVwiQmltsjgmPAdB04t89/1O/w1cDnyilFU="
-$file = "C:\Users\KKAWAGU4\OneDrive - JNJ\99　その他\KV\richmenu-pre.jpg"
-
-curl.exe -i -X POST `
-  "https://api-data.line.me/v2/bot/richmenu/richmenu-8c46907e48156f3bfbc4fe0c88e5a66e/content" `
-  -H "Authorization: Bearer amxg/VZETTECi1jcqDmjymR5JDc1tGPKeDBNb9+UFTRzFaZjs0LJ8PJFCLSELG/QSzohN/6Etf0+mMnCw8LnY3I1JjqMq8sfb71dRA8YSn0ZGS5Crn99QOnCs13v9GK6L+9Eo3Z+wVwiQmltsjgmPAdB04t89/1O/w1cDnyilFU=" `
-  -H "Content-Type: image/jpeg" `
-  -T "C:\Users\KKAWAGU4\OneDrive - JNJ\99　その他\KV\richmenu-pre.jpg"
