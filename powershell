@@ -1,8 +1,4 @@
-$token = Read-Host "amxg/VZETTECi1jcqDmjymR5JDc1tGPKeDBNb9+UFTRzFaZjs0LJ8PJFCLSELG/QSzohN/6Etf0+mMnCw8LnY3I1JjqMq8sfb71dRA8YSn0ZGS5Crn99QOnCs13v9GK6L+9Eo3Z+wVwiQmltsjgmPAdB04t89/1O/w1cDnyilFU="
-$uri = "https://api-data.line.me/v2/bot/richmenu/richmenu-8c46907e48156f3bfbc4fe0c88e5a66e/content"
-$file = "C:\Users\KKAWAGU4\OneDrive - JNJ\99　その他\KV\richmenu-pre.jpg"
+$uri = "https://api.line.me/v2/bot/richmenu/実際のrichMenuId"
 
-curl.exe -v -X POST $uri `
-  -H "Authorization: Bearer $token" `
-  -H "Content-Type: image/jpeg" `
-  --data-binary "@$file"
+curl.exe -i $uri `
+  -H "Authorization: Bearer $token"
