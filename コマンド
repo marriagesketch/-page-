@@ -1,1 +1,0 @@
-curl.exe -v -X POST https://api-data.line.me/v2/bot/richmenu/{richMenuId_A}/content -H "Authorization: Bearer {channel access token}" -H "Content-Type: image/jpeg" -T richmenu-pre_final.jpg
