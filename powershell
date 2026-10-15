@@ -1,0 +1,8 @@
+$token = Read-Host "チャネルアクセストークンを入力"
+$uri = "https://api-data.line.me/v2/bot/richmenu/実際のrichMenuId/content"
+$file = "C:\Users\ユーザー名\Pictures\richmenu-pre.jpg"
+
+curl.exe -v -X POST $uri `
+  -H "Authorization: Bearer $token" `
+  -H "Content-Type: image/jpeg" `
+  --data-binary "@$file"
