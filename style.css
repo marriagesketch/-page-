@@ -808,36 +808,58 @@ a { color: var(--rose); }
   box-shadow: 0 12px 28px rgba(198, 74, 103, 0.18);
 }
 .shot img { display: block; width: 100%; height: auto; }
-/* 縦に短い画面は、隣の画面と高さをそろえる（余白は画面と同じ背景色） */
-.shot--tall { box-sizing: content-box; aspect-ratio: 640 / 955; background: #fff6f7; }
 .menu__shot .shot img { filter: none; }
 
-/* ---------- 回答画面のイメージ ---------- */
-.screens {
-  padding: 80px 0;
-  background: var(--blush);
-}
-.screens__list {
-  margin-top: 40px;
+/* ---------- 質問のイメージ：自分史 ---------- */
+.q--wide { grid-column: 1 / -1; }
+.story { margin-top: 16px; }
+.story__head { display: flex; align-items: center; gap: 14px; }
+.story__ava {
+  flex: none;
   display: grid;
-  gap: 40px;
-  justify-items: center;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #f9a8b8, #ee8aa0);
+  color: #fff;
+  font-weight: 700;
+  font-size: 20px;
 }
-.screens__item { margin: 0; width: 100%; max-width: 320px; }
-.screens__item figcaption {
+.story__name { font-weight: 700; line-height: 1.4; }
+.story__en { font-size: 12px; letter-spacing: 0.2em; color: var(--ink-soft); }
+.story__list {
   margin-top: 16px;
-  text-align: center;
   display: grid;
-  gap: 2px;
+  gap: 12px;
+  padding-left: 18px;
+  border-left: 3px solid var(--blush-deep);
 }
-.screens__item figcaption strong { color: var(--rose); font-size: 16px; }
-.screens__item figcaption span { font-size: 14px; color: var(--ink-soft); }
-
-@media (min-width: 720px) {
-  .screens__list {
-    grid-template-columns: repeat(2, minmax(0, 320px));
-    justify-content: center;
-    align-items: start;
-    gap: 56px;
-  }
+.story__card {
+  position: relative;
+  padding: 14px 16px;
+  border-radius: 14px;
+  background: #fff;
+  border: 1px solid var(--blush-deep);
+}
+.story__card::before {
+  content: "";
+  position: absolute;
+  left: -29px;
+  top: 18px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--rose-soft);
+  box-shadow: 0 0 0 3px var(--paper);
+}
+.story__age { font-size: 12px; color: var(--ink-soft); }
+.story__title { font-weight: 700; }
+.story__card dl { margin-top: 8px; display: grid; gap: 4px; font-size: 14px; }
+.story__card dl > div { display: grid; grid-template-columns: 8.5em 1fr; gap: 8px; }
+.story__card dt { color: var(--rose); font-weight: 700; }
+.story__card dd { margin: 0; }
+@media (min-width: 820px) {
+  .story__list { grid-template-columns: 1fr 1fr; padding-left: 0; border-left: 0; }
+  .story__card::before { display: none; }
 }
