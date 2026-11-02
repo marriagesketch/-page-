@@ -417,9 +417,10 @@ a { color: var(--rose); }
 
 /* ---------- メニュー ---------- */
 .menu { padding: 80px 0; }
-.menu__inner {
+.menu__stage {
+  margin-top: 56px;
   display: grid;
-  gap: 40px;
+  gap: 32px;
   align-items: center;
 }
 .menu__shot {
@@ -456,7 +457,10 @@ a { color: var(--rose); }
 .menu__list dd { margin-top: 2px; color: var(--ink-soft); }
 
 @media (min-width: 900px) {
-  .menu__inner { grid-template-columns: 0.8fr 1.2fr; gap: 64px; }
+  .menu__stage { grid-template-columns: 0.8fr 1.2fr; gap: 64px; margin-top: 72px; }
+  /* 真剣交際ブロックは画像を右側にして、ジグザグに */
+  .menu__stage--rev { grid-template-columns: 1.2fr 0.8fr; }
+  .menu__stage--rev .menu__shot { order: 2; }
 }
 
 /* ---------- Part1-3（階段） ---------- */
@@ -794,3 +798,46 @@ a { color: var(--rose); }
 .link-card__title { font-weight: 700; color: var(--rose); }
 .link-card__text { margin-top: 2px; }
 .link-card__url { margin-top: 4px; font-size: 11px; color: var(--sky-ink); text-decoration: underline; }
+
+/* ---------- スクリーンショットの枠（共通） ---------- */
+.shot {
+  border: 6px solid var(--ink);
+  border-radius: 28px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 12px 28px rgba(198, 74, 103, 0.18);
+}
+.shot img { display: block; width: 100%; height: auto; }
+/* 縦に短い画面は、隣の画面と高さをそろえる（余白は画面と同じ背景色） */
+.shot--tall { box-sizing: content-box; aspect-ratio: 640 / 955; background: #fff6f7; }
+.menu__shot .shot img { filter: none; }
+
+/* ---------- 回答画面のイメージ ---------- */
+.screens {
+  padding: 80px 0;
+  background: var(--blush);
+}
+.screens__list {
+  margin-top: 40px;
+  display: grid;
+  gap: 40px;
+  justify-items: center;
+}
+.screens__item { margin: 0; width: 100%; max-width: 320px; }
+.screens__item figcaption {
+  margin-top: 16px;
+  text-align: center;
+  display: grid;
+  gap: 2px;
+}
+.screens__item figcaption strong { color: var(--rose); font-size: 16px; }
+.screens__item figcaption span { font-size: 14px; color: var(--ink-soft); }
+
+@media (min-width: 720px) {
+  .screens__list {
+    grid-template-columns: repeat(2, minmax(0, 320px));
+    justify-content: center;
+    align-items: start;
+    gap: 56px;
+  }
+}
