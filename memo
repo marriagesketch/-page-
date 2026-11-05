@@ -1,0 +1,44 @@
+できます。しかも `INTERNAL_SECRET`（63行目）は、すでにスクリプトプロパティから読む形になっています。直接書き込まれているのは次の2つだけです。
+
+- 23行目 `SPREADSHEET_ID`
+- 62行目 `PARTNERS_ENDPOINT`（Partners用GASの `/exec` URL）
+
+## 修正方法
+
+**1. コードの変更（2か所）**
+
+23行目を次のように置き換えます。
+
+```javascript
+var SPREADSHEET_ID   = PropertiesService.getScriptProperties().getProperty('SPREADSHEET_ID') || '';
+```
+
+62行目も同様に置き換えます。
+
+```javascript
+var PARTNERS_ENDPOINT = PropertiesService.getScriptProperties().getProperty('PARTNERS_ENDPOINT') || '';
+```
+
+使用箇所（86行目・150行目）は変数名が同じなので、他の変更は不要です。
+
+**2. スクリプトプロパティの登録**
+
+「プロジェクトの設定」→「スクリプト プロパティ」に、次の3つを登録します（前後にスペースや改行、引用符を入れないでください）。
+
+| プロパティ名 | 値 |
+|---|---|
+| `SPREADSHEET_ID` | スプレッドシートのID |
+| `PARTNERS_ENDPOINT` | Partners用GASの `/exec` URL |
+| `INTERNAL_SECRET` | （登録済みのもの） |
+
+**3. デプロイし直し**
+
+コードを変更したので、「デプロイ → デプロイを管理 → 編集（鉛筆）→ バージョン：新バージョン」で更新してください。プロパティだけを変えた場合は再デプロイは不要です。
+
+## 補足
+
+- **漏えいリスクの度合い**: `SPREADSHEET_ID` は、IDだけではシートを開けません（共有権限が別に必要です）。`/exec` URLも、Partners側が `secret` を要求しているため、URLだけでは情報を取得できません。本当に守るべきなのは `INTERNAL_SECRET` で、こちらは対応済みです。ただ、コードをGitHubやチャットに貼る機会があるなら、プロパティ化しておくと安全です。
+- **コードを共有済みの場合**: 今回アップロードされたコードには、上の2つの値がそのまま入っています。このコードを他の場所にも貼っている場合は、`PARTNERS_ENDPOINT` のURLが知られている前提で、`INTERNAL_SECRET` を強度の高い値にしておくと安心です。
+- **設定漏れ対策**: プロパティが未設定だと `openById('')` でエラーになります。コードを貼り替えた直後に動かない場合は、プロパティ名のスペルミスや「保存」の押し忘れを疑ってください。
+
+必要であれば、冒頭のコメント（デプロイ手順の12〜15行目）も、プロパティ設定の説明に書き換えた版を作ります。
