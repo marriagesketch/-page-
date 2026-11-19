@@ -799,16 +799,6 @@ a { color: var(--rose); }
 .link-card__text { margin-top: 2px; }
 .link-card__url { margin-top: 4px; font-size: 11px; color: var(--sky-ink); text-decoration: underline; }
 
-/* ---------- スクリーンショットの枠（共通） ---------- */
-.shot {
-  border: 6px solid var(--ink);
-  border-radius: 28px;
-  overflow: hidden;
-  background: #fff;
-  box-shadow: 0 12px 28px rgba(198, 74, 103, 0.18);
-}
-.shot img { display: block; width: 100%; height: auto; }
-.menu__shot .shot img { filter: none; }
 
 /* ---------- 質問のイメージ：自分史 ---------- */
 .q--wide { grid-column: 1 / -1; }
